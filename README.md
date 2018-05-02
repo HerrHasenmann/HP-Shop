@@ -13,4 +13,4 @@ Core template for applications with AngularJS and Material Angular
 
 ### Routing
 * configuration for routes
-* default component template 
+* default component template
