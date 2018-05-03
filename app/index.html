@@ -7,10 +7,29 @@
     <link rel="stylesheet" href="./assets/css/styles.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 </head>
-<body ng-cloak>
+<body ng-cloak layout="column">
 
+<md-toolbar md-whiteframe="4">
+    <div class="md-toolbar-tools">
+        <span>HP-Shop</span>
+
+        <span flex="5"></span>
+
+        <search></search>
+
+        <span flex></span>
+
+        <md-button class="md-icon-button">
+            <md-icon md-svg-icon="magnify"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+
+<md-content flex>
+    <div ng-view></div>
+</md-content>
 <!-- TODO add application + routes in app-config.js -->
-<div ng-view></div>
+
 
 <!-- AngularJS -->
 <script src="./node_modules/angular/angular.min.js"></script>
@@ -31,7 +50,12 @@
 <script src="./shared/title/TitleService.min.js"></script>
 
 <!-- Components -->
-<script src="./components/default/defaultComponent.js"></script>
+<script src="./components/default/defaultComponent.min.js"></script>
+<script src="components/search/search-input/searchComponent.min.js"></script>
+<script src="components/search/search-result/searchResultComponent.min.js"></script>
+
+<!-- Services -->
+<script src="./components/search/searchService.min.js"></script>
 
 </body>
 </html>

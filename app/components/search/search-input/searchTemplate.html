@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<form ng-submit="$ctrl.search($ctrl.searchQuery)" autocomplete="off">
+    <md-input-container md-no-float class="md-no-error md-accent" md-colors="{background: 'background'}" style=" border-radius: 10px; padding-right: 10px">
+        <md-icon md-svg-icon="magnify" md-colors="{fill: 'accent'}"></md-icon>
+        <input ng-model="$ctrl.searchQuery" placeholder="Search for anything">
+    </md-input-container>
+    <md-button type="submit" class="md-accent md-raised">Search</md-button>
+</form>
