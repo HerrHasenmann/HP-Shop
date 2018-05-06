@@ -7,10 +7,11 @@ function SearchResultController($rootScope, $scope, $routeParams, searchService)
 
     var ctrl = this;
 
+    ctrl.colors = ["red", "green", "blue", "yellow", "orange"];
+
     $scope.$watch(function () {
         return $routeParams.query
     }, function (searchQuery) {
-        console.log(searchQuery);
         searchService.search(searchQuery).then(function (response) {
 
             $rootScope.safeApply(function () {
@@ -19,5 +20,11 @@ function SearchResultController($rootScope, $scope, $routeParams, searchService)
 
         })
     })
+
+    ctrl.randomColor = function () {
+        var index = Math.round(Math.random()*(ctrl.colors.length-1));
+
+        return ctrl.colors[index]+"-600";
+    }
 
 }

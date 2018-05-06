@@ -1,4 +1,28 @@
 <!DOCTYPE html>
-<div ng-repeat="searchResult in $ctrl.searchResults">
-    {{searchResult}}
+<div layout="row" layout-wrap>
+    <div flex-xs="100" flex-sm="50" flex-md="33" flex="25" ng-repeat="searchResult in $ctrl.searchResults" layout="column" >
+        <div flex layout="column" style="margin: 16px" md-whiteframe="4">
+            <div layout="row" layout-align="center center" style="height: 180px;" md-colors="::{background: $ctrl.randomColor()}">
+                <img ng-src="{{searchResult.images[0].url}}" style="max-width: 100%; max-height: 100%;">
+                <md-icon ng-if="!searchResult.images[0]" md-svg-icon="camera-off" style="width: 40%; height: 40%;"></md-icon>
+            </div>
+            <div layout-padding>
+                <div class="md-title">{{searchResult.name}}</div>
+                <div class="md-subhead">{{searchResult.brand_name}}</div>
+                <div>{{searchResult.size}}</div>
+            </div>
+            <div flex></div>
+            <div layout="row" layout-align="space-around center">
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="share-variant"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="star"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="cart"></md-icon>
+                </md-button>
+            </div>
+        </div>
+    </div>
 </div>

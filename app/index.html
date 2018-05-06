@@ -9,24 +9,21 @@
 </head>
 <body ng-cloak layout="column">
 
+<!-- TODO move to component -->
 <md-toolbar md-whiteframe="4">
     <div class="md-toolbar-tools">
-        <span>HP-Shop</span>
+        <span hide-xs>HP-Shop</span>
 
-        <span flex="5"></span>
+        <span hide-xs flex="5"></span>
 
         <search></search>
 
-        <span flex></span>
-
-        <md-button class="md-icon-button">
-            <md-icon md-svg-icon="magnify"></md-icon>
-        </md-button>
+        <span hide-xs flex></span>
     </div>
 </md-toolbar>
 
-<md-content flex>
-    <div ng-view></div>
+<md-content flex ng-view>
+
 </md-content>
 <!-- TODO add application + routes in app-config.js -->
 
